@@ -5,7 +5,11 @@ import java.util.Optional;
 
 public class UserController {
     UserRepository userRepository = new UserRepository();
-
+    /**
+     *    a. Метод findUserById(int id), який повертає Optional<User> з користувачем за вказаним id.
+     *    b. Метод findUserByEmail(String email), який повертає Optional<User> з користувачем за вказаною електронною поштою.
+     *    c. Метод findAllUsers(), який повертає список всіх користувачів у вигляді Optional<List<User>>.
+     */
     Optional<User> findUserById(int id){
         Optional<List<User>> optional =
                 userRepository.getAllProducts();
@@ -42,7 +46,3 @@ public class UserController {
         return Optional.empty();
         }
     }
-//    a. Метод findUserById(int id), який повертає Optional<User> з користувачем за вказаним id.
-//    b. Метод findUserByEmail(String email), який повертає Optional<User> з користувачем за вказаною електронною поштою.
-//    c. Метод findAllUsers(), який повертає список всіх користувачів у вигляді Optional<List<User>>.
-
